@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # DB configuration
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://flask_contact_app_user:ctaXwICYIKEdVsq0Vhieph81McuDduH7@dpg-cih5a059aq012eqlgtl0-a.oregon-postgres.render.com/flask_contact_app"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SECRET_KEY"] = "llave_secreta"
 
