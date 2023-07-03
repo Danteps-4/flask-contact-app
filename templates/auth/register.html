@@ -1,0 +1,35 @@
+{% extends './layout.html' %} {% block title %}Home{% endblock %} {% block body %}
+
+<h1>Register</h1>
+
+<div class="col-md-4 offset-md-4">
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+    <div class="card card-body">
+        <form method="POST" action="/register">
+            <div class="form-group pt-4 pb-4">
+                <input type="text" placeholder="Username" name="username" class="form-control">
+            </div>
+            <div class="form-group pt-4 pb-4">
+                <input type="password" placeholder="Password" name="password" class="form-control">
+            </div>
+            <div class="form-group pt-4 pb-4">
+                <input type="password" placeholder="Confirm password" name="password2" class="form-control">
+            </div>
+            <div class="form-group pt-4 pb-4">
+                <input type="email" placeholder="Email" name="email" class="form-control">
+            </div>
+            <div class="d-grid pt-4 pb-4">
+                <button type="submit" class="btn btn-success">Register</button>
+            </div>
+        </form>
+        <p class="apart">Have an account?<a href="{{url_for('login')}}" class="btn btn-outline-primary">Login</a></p>
+    </div>
+</div>
+
+
+{% endblock %}

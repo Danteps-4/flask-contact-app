@@ -1,0 +1,54 @@
+body {
+    position: relative;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    background: #B6B6B6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E5E5E5, #B6B6B6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #E5E5E5, #B6B6B6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+.container-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-size: 60px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 30px;
+}
+
+.card .apart {
+    text-align: center;
+}
+
+.card .apart a {
+    margin: 10px;
+}
+
+.footer {
+    background-color: #E5E5E5;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

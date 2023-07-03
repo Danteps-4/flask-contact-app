@@ -1,0 +1,24 @@
+{% extends './layout.html' %} {% block body %}
+
+<h1>Edit contact</h1>
+
+<div class="col-md-4 offset-md-4">
+    <div class="card card-body">
+        <form method="POST">
+            <div class="form-group">
+                <input type="text" placeholder="Fullname" name="name" value="{{contact.name}}" class="form-control mt-4 mb-4">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="phone" name="phone" value="{{contact.phone}}" class="form-control mt-4 mb-4">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Email" name="email" value="{{contact.email}}" class="form-control mt-4 mb-4">
+            </div>
+            <div class="d-grid pt-4 pb-4">
+                <button type="submit" class="btn btn-success">Edit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
